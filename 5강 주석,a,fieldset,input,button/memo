@@ -1,0 +1,25 @@
+<a> 태그 : 링크 
+
+<a href = https://www.naver.com> 네이버 </a>
+
+a 태그의 속성 즉 부가설명
+href : 경로
+
+html 주석
+<!-- -->
+
+<fieldset>  : 공통된것을 묶을때
+    <legend>검색</legend> : fieldset의 제목이라고 생각
+<fieldset>
+
+<input/> : input태그는 content가없음
+<input>내용</input> : 이렇게안쓰임
+<input type ="radio" name="one pick"> : 한가지만선택가능
+<input type ="radio" name="one pick"> 
+<input type= "checkbox">  : 다중선택가능
+input 속성
+name : 위 input 3번째 태그와 4번째 태그의 radio가 같은 name으로 묶여있는것을 볼수가 있음
+
+<textarea></textarea> : 긴글쓸때 사용
+
+<button></button>
