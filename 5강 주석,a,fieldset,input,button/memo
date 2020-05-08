@@ -22,4 +22,4 @@ name : 위 input 3번째 태그와 4번째 태그의 radio가 같은 name으로 
 
 <textarea></textarea> : 긴글쓸때 사용
 
-<button></button>
+<button></button> : 버튼태그
