@@ -1,0 +1,5 @@
+HTML : 웹의 구조 ,컨텐츠
+CSS : 디자인
+JS : 웹의 모든것
+
+document.head.parentNode.removeChild(document.head) : css가 빠진웹구조볼수있음
