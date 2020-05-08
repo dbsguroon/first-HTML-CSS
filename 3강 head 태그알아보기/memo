@@ -7,9 +7,10 @@ body : 화면 담당
 ## Head에 무엇이들어갈까 
 
 목적 : 웹사이트에 대한 모든정보가 들어가 있음
-ex) 웹사이트 설명 , 한글설정
+ex) 웹사이트 설명 , 한글설정 , favicon
 
 
-## favicon 복사
+## favicon
 
+<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
  ./ : 현재폴더
