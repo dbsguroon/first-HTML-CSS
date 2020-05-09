@@ -1,0 +1,5 @@
+/* 앞에 div는 생략가능  div 태그만 생략이 가능하다*/
+div#header_center {
+    margin: 0 auto;
+    width: 1080px;
+}
