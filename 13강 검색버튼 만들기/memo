@@ -1,0 +1,5 @@
+button에도 브라우저가 기본적으로 제공하는 값이 있기때문에 다제거하여 주기
+border:none;
+padding:0;
+background: #03cf5d; //배경으로 color로넣을수있음
+

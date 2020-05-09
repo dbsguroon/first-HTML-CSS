@@ -57,3 +57,23 @@ div#header-center {
     /* 검색창을 클릭했을때 파란색으로 outline이나오는데 없애고싶을때 사용 , 궁금하면 이코드만지워보고 검색창 클릭*/
     outline: none;
 }
+
+#header-search fieldset button {
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+}
+
+#header-search fieldset button .search-image {
+    /* inline block 이어야 width와 hegiht 값을 넣을수있음 */
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    /* 정중앙에 오게할람 49px = 21px+14px +14px  */
+    margin: 14px;
+    background: url(sp_search.png);
+    background-position: -4px -60px;
+    background-repeat: no-repeat;
+}
