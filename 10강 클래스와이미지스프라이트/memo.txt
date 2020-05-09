@@ -1,0 +1,22 @@
+.blind라는 클래스는 시각적으로는 보이지 않고 스크린 리더기에만 읽힘
+.blind {
+    position:absolute;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    margin:-1px;
+    width:1px;
+    height:1px;
+}
+
+즉 id는 id로지정한 태그에만 적용이가능
+class는 여러 태그에 적용가능
+즉 class는 여러번 쓸수있고  하나의 태그에 여러클래스를 동시에적용할수도 있다.
+
+<div class="blind color">
+div라는 태그 하나에 blind라는 클래스와 color라는 클래스 뿐만아니라 여러개 적용가능
+
+이미지 스플라이트 :
+이미지를 보통 서버에서 가져온다.
+각각의 많은 이미지를 가져오려면 네트워크에 많은 부하가 걸리기 때문에
+이미지 스플라이트를 씀
+말그대로 이미지 한파일에 여러이미지를 넣어놓고 잘라서(splite) 쓴다는 뜻임

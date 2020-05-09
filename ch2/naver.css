@@ -11,13 +11,19 @@ div#header-search>h1 {
     display: inline-block;
 }
 
-div#header-search>h2 {
-    display: none;
-    /* 화면에는 사라지지만 태그에는 남아있음 */
-}
 
 div#header-search>fieldset {
     width: 520px;
     display: inline-block;
     /* inline-block으로 마진을 없앰 */
+}
+
+/* 화면에서 사라지는 클래스임 ,웹접근성을 높임*/
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
 }
