@@ -1,4 +1,8 @@
 /* 화면에서 사라지는 클래스임 ,웹접근성을 높임*/
+* {
+    box-sizing: border-box;
+}
+
 .blind {
     position: absolute;
     overflow: hidden;
@@ -18,6 +22,7 @@ div#header-center {
    width가 적용된것을 볼려면 background-color를 주면확인가능    */
 #header-search a {
     text-decoration: none;
+    vertical-align: middle;
 }
 
 #header-search h1 {
@@ -39,5 +44,16 @@ div#header-center {
     margin-left: 20px;
     padding: 12px 0 12px 10px;
     border: 2px solid #03cf5d;
+    box-sizing: border-box;
+    vertical-align: middle;
 
+}
+
+#header-search>fieldset input {
+    /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
+    border: none;
+    /* tol right bottom left 전부적용됨 */
+    padding: 0;
+    /* 검색창을 클릭했을때 파란색으로 outline이나오는데 없애고싶을때 사용 , 궁금하면 이코드만지워보고 검색창 클릭*/
+    outline: none;
 }
