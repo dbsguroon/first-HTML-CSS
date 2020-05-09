@@ -1,0 +1,27 @@
+px : 상대적인 단위
+
+cm는 절대적단위
+px은 내모니터의 가로 넓이 길이중에 일정부분을 차지한다고보면됨 
+콘솔창에 screen.width 치면 나의 모니터 넓이를 알수있음
+
+
+선택자에서 자식을 선택할때는 >
+
+div > h1  : div밑에있는 h1
+
+자식이나 자식의 자식을 자손이라고 부르는데 찾는방법은 한칸 띄어쓰면됨
+
+div#header-center h1{
+
+}
+
+display:block 일때
+->기본적으로 block은 가로크기를 다차지하기때문에 width를 준다.
+주의할점은 width를 주어도 나머지부분은 margin으로 되어있음
+
+display:inline-block;
+->display:block일때 width의값을 주고 남은 나머지부분의 마진부분을 없앨수 있음, inline(자기컨텐츠크기)처럼동작하지만  block의 성질을 가지고 있음
+  즉block의성질을 가지고 있기때문에 width나 height값을 쓸수가 있음
+
+display:inline;
+->inline은 자기컨체츠크기만큼 차지하고 대표적으로 span이 있고 텍스트에 많이쓰인다.

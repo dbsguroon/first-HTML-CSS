@@ -1,5 +1,23 @@
 /* 앞에 div는 생략가능  div 태그만 생략이 가능하다*/
-div#header_center {
+div#header-center {
     margin: 0 auto;
     width: 1080px;
+}
+
+/* h1 태그는 가로의 100%로를 차지하니까 width를 주는것 
+   width가 적용된것을 볼려면 background-color를 주면확인가능    */
+div#header-search>h1 {
+    width: 280px;
+    display: inline-block;
+}
+
+div#header-search>h2 {
+    display: none;
+    /* 화면에는 사라지지만 태그에는 남아있음 */
+}
+
+div#header-search>fieldset {
+    width: 520px;
+    display: inline-block;
+    /* inline-block으로 마진을 없앰 */
 }
