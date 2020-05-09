@@ -20,6 +20,7 @@ div#header-center {
 
 /* h1 태그는 가로의 100%로를 차지하니까 width를 주는것 
    width가 적용된것을 볼려면 background-color를 주면확인가능    */
+
 #header-search a {
     text-decoration: none;
     vertical-align: middle;
@@ -30,6 +31,8 @@ div#header-center {
     height: 48px;
     display: inline-block;
     background: url(sp_search.png) -10px -5px no-repeat;
+    position: relative;
+    top: -3px;
 }
 
 #header-search h1 span {
@@ -46,6 +49,7 @@ div#header-center {
     border: 2px solid #03cf5d;
     box-sizing: border-box;
     vertical-align: middle;
+    position: relative;
 
 }
 
@@ -56,6 +60,9 @@ div#header-center {
     padding: 0;
     /* 검색창을 클릭했을때 파란색으로 outline이나오는데 없애고싶을때 사용 , 궁금하면 이코드만지워보고 검색창 클릭*/
     outline: none;
+    vertical-align: top;
+    width: 405px;
+    height: 23px;
 }
 
 #header-search fieldset button {
@@ -64,6 +71,9 @@ div#header-center {
     border: none;
     padding: 0;
     background: #03cf5d;
+    position: absolute;
+    right: 0px;
+    top: -2px;
 }
 
 #header-search fieldset button .search-image {
