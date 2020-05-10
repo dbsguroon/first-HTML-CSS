@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div style="background-color: yellow; overflow: hidden; height: 200px;">
+      <!--둥둥둥은 놔두고 그주변으로 감쌈-->
+      <div style="float: left; background-color: blue; height: 300px;">
+        둥둥둥둥
+      </div>
+      <div>
+        가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+      </div>
+    </div>
+    <!--
+        1. 부모가 자식을 다안감싸고 있다.
+        2. 자세히 보면 div는 블록포멧컨텍스트(부모가어디까지 자식을감싸는지) 조건에
+        포함되어있지 않다.
+        3. 다감싸게 하려면 부모태그에overflow:visible이 아닌요소를 넣으면 감싸게 되는데
+           overflow:hidden, overflow:auto를 줘보자
+        4. overflow:hidden 과 auto의 차이점은 부모의 높이가 있을떄 발생하는데
+        자식의 높이가  부모보다 높을떄  overflow:auto는 스크롤 바를  생성하지만
+        자식의 높이가 부모보다 높을때 overflow:hidden은  넘치는 부분만큼 잘라버린다.
+        */
+    -->
+  </body>
+</html>

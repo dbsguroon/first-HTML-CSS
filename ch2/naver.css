@@ -41,6 +41,14 @@ body {
     width: 1080px;
 }
 
+.center-align div {
+    overflow: hidden;
+}
+
+.center-align div span {
+    float: right;
+}
+
 /* h1 태그는 가로의 100%로를 차지하니까 width를 주는것 
    width가 적용된것을 볼려면 background-color를 주면확인가능    */
 

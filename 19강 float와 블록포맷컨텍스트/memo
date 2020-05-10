@@ -1,0 +1,39 @@
+블록포맷컨텍스트
+
+: 부모입장에서 자식을 어디까지 포함해야하나
+
+블록포맷컨텍스트는 다음중하나에 의해서 생성된다.
+
+- float(float이 none이 아닌 요소)
+- overflow가 visible이 아닌 요소
+- 절대위치로 지정된요소 (position이 absolute 또는 fixed인 요소)
+- display inline-blcok 인 요소
+
+네이버를 시작페이지로 이부분을 오른쪽으로 넘기는방법
+
+1. text-align : right;
+2. position:absolte (부모가 기준점이없으면 문서에서 이동)
+   right:0; top:0;
+   감싸주는 div를 하나더만들어
+   그곳에 position:relative를 준다.
+3. 마지막 float:right를 주는법
+
+
+text-align:right vs float :right 차이
+
+text-align:right : 그공간내에서만 오른쪽으로 움직임
+
+float:right : right로 이동하고 공간이 둥둥 띄워지면서
+그빈공간을 header_search가 파고올라옴
+또한 공간을 확인해보면 마치 header_search가 float-right 한 요소들을
+감싸고 있는것처럼보임
+
+float의특징:
+둥둥 떠있어서 그공간으로 다른 content가 들어가지만 겹치지는 않는다
+
+즉예제에서만 보면
+네이버를 시작페이지로를 float :right를 주면
+그사이로 네이버 검색 (header_search)가 영역을 침범하게 되는데
+그영역침범을 막기위해서 네이버를 시작페이로의 부모태그 div에
+overflow:hidden;을 주어서 자식태그인 span 태그를 모두 감싸게 되버리면
+네이버 검색(header_search)가 더이상 침범할 영역이 없어지는것임
