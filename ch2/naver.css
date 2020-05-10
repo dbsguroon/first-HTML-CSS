@@ -1,8 +1,31 @@
-/* 화면에서 사라지는 클래스임 ,웹접근성을 높임*/
+/*
+#fixed {
+    position: fixed;
+    width 와 height를 주기위해 inlineblock을 씀  
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    right: 50px;
+    top: 50px;
+    border: 1px solid black;
+    모서리의 각을 둥글게 잡음 
+    border-radius: 50px;
+} */
+/* 모든요소에적용 */
 * {
     box-sizing: border-box;
 }
 
+/* html 과 body에 기본적으로 제공되는 padding ,margin을제거 */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 화면에서 사라지는 클래스임 ,웹접근성을 높임*/
 .blind {
     position: absolute;
     overflow: hidden;
@@ -51,6 +74,7 @@ div#header-center {
     vertical-align: middle;
     position: relative;
 
+
 }
 
 #header-search>fieldset input {
@@ -72,8 +96,9 @@ div#header-center {
     padding: 0;
     background: #03cf5d;
     position: absolute;
-    right: 0px;
-    top: -2px;
+    top: -1px;
+    right: 0;
+
 }
 
 #header-search fieldset button .search-image {

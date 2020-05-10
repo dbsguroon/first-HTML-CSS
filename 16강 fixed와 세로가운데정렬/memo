@@ -1,0 +1,85 @@
+fixed:
+scorll을 내려도 따라내려옴
+
+position 속성이 fixed인경우 컨테이닝 블록은  뷰포트(화면)이다.
+즉 HTML문서를 기준으로만 움직인다고 생각하면됨
+
+컨테이닝 블록파악하기
+<style>
+    secition{
+        display:block;
+        width:400px;
+    }
+    p{
+        width:50%;
+    }
+</style>
+
+
+<body>
+   <section>
+        <p></p>
+   </section>
+
+-> containing 블록은 무조건부모라고 생각해선안된다.
+   즉 조건이 있는데 여기서는 부모태그인 section이 컨테이닝 블록이다.
+   이유는 position : static 이기 떄문이다.
+   그래서 p 의 넓이는 200px 이 될수 있는것이다.
+
+----------------------------------------------------------------------
+
+<style>
+    body{
+        background:beige;
+    }
+    secition{
+        display:inline;
+        width:400px;
+    }
+    p{
+        width:50%;
+    }
+</style>
+
+
+<body>
+   <section>
+        <p></p>
+   </section>
+
+-> containing 블록은 무조건부모라고 생각해선안된다.
+   즉 조건에 따라서 display:inline 인경우에는 containing block이 될수가 없어서
+   p태그는 body를 기준으로  body넓이의 절반이 되는것이다.
+
+-------------------------------------------------------------------------------------
+
+조건
+1. position 속성이 static 이나 relative 이거나
+   display 속성이 block, inline-block, list-item 인경우  
+   또는 table,flex,grid인경우
+   containing 블록이 될수 있지만
+   그렇지 않은경우는 될수가 없다  
+   안되는경우 display:inline 인경우 containing block이 될수 없음
+
+2. position 속성이 absolute인경우 컨테이닝 블록은 
+   position 속성이 static만 아니면 된다.
+   fixed,absolute,relative,sticky 전부 다 된다.
+
+3. position 속성이 fixed인경우 컨테이닝 블록은  뷰포트(화면)이다.
+
+
+-------------------------------------------------------------------------------------
+세로가운데 정렬하는법
+
+마지막으로 검색이미지에 중앙정렬을 맞추기위해서 
+1.margin을 넣어주었는데 
+
+중앙정렬 다른방법도 있음 (버튼에서 세로가운데정렬이 안먹히는 이유는 이미기본적으로 버튼이 세로가운데 정렬을 하기때문에
+우리예제에서는 안먹힘)
+
+2.position :relative;
+  top : 50%;
+  transform : translateY(-50%);
+
+자기자신의위치에서 50%내린후 다시 자기자신이 가지고 있는 높이의 50%로를 올린다.
+
