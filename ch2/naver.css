@@ -36,7 +36,7 @@ body {
 }
 
 /* 앞에 div는 생략가능  div 태그만 생략이 가능하다*/
-div#header-center {
+.center-align {
     margin: 0 auto;
     width: 1080px;
 }
@@ -111,4 +111,52 @@ div#header-center {
     background: url(sp_search.png);
     background-position: -4px -60px;
     background-repeat: no-repeat;
+}
+
+nav .center-align {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav .center-align li {
+    display: inline-block;
+}
+
+nav li span:first-child {
+    display: inline-block;
+    height: 16px;
+    background-image: url(sp_nav.png);
+    background-repeat: no-repeat;
+}
+
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+
+}
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
 }

@@ -1,0 +1,56 @@
+nav도 
+
+가운데정렬용 div를 하나 만들어야 한다.
+
+.center-align{
+margin :0 auto;
+width 1080px;
+}
+
+공통으로 header 중앙정렬 , nav 중앙정렬 둘다 들어가니까
+저렇게 클래스로 만듬
+---------------------------------------------------------
+
+ul에 있는 margin , padding ,list-style을 다없앤다.
+li는 한줄전체를 차지하기 떄문에 display:inline-block 으로 없애준다
+
+
+똑같은 li가 있으면 nth-child 선택자로 선택가능
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>jS</li>
+</ul>
+
+ul li:first-child  -> html 선택
+ul li:nth-child(2)  -> CSS 선택
+ul li:last-child -> js 선택
+
+다만 실무에서는 잘안쓰는게 JS와 CSS를 바꾸어야 할떄 nth-child 숫자를 모두 
+바꿔주어야 하는 유지보수에 불편함이 큼
+그래서 class 나 id 이름을 주고 택함
+
+---------------------------------------------------
+
+참고로 공통적인것을 CSS로 뺼떄는
+
+3개이상 비교해보고 뺴기
+
+선택자도 3개를 비교해서 공통으로 들어가는 선택자들만 뺴면 쉽게 뺼수 있음
+
+공통선택자 nav li span:frst-child{
+    공통으로 반복되는코드들을 여기다 넣으면됨
+}
+
+
+nav li:first-child span:first-child{
+
+}
+nav li:nth-child(2) span:first-child{
+
+}
+nav li:nth-child(3) span:first-child{
+
+}
+
