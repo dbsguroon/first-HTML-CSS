@@ -1,0 +1,81 @@
+margin-left :14px 이 공통으로 들어가기 때문에 
+이것도 공통으로 뺼수가 있따.
+
+공통에다가
+
+margin-left:14px을 넣고
+
+첫번쨰 자식에게만
+margin-left:0을주면됨
+첫번쨰자식은 margin-left 가 안들어가니까
+
+---------------------------------------------
+
+css 우선순위 적용
+
+1. 기본적으로 뒤에나오는 css가 우선순위가 높다.
+2. !IMPORTANT -> Inline style attribute -> id ->class,다른 attribute -> tag element
+순으로 우선순위가 높다.
+3. 우선순위가 같다면 개수가 많은 css가 우선순위가 더높다.
+
+즉 금,은,동으로 생각해보자
+
+id : 금메달
+class :은메달
+tag :동메달이라고 생각
+
+li li li {
+    color:red;
+}
+
+li li li {
+    color:blue;
+}
+
+둘다 동메달3개이기떄문에 아래개 적용
+
+
+li li li li{
+    color:red;
+}
+
+li li li {
+    color:blue;
+}
+
+개수로밀어붙이면 위에꺼적용
+
+
+li li .rangking {
+    color:red;
+}
+
+li li li {
+    color:blue;
+}
+
+위에꺼적용 
+위 : 은메달 1 동메달2개
+아래 : 동메달 3개
+
+아무리 동메달이 많아도 은메달에게 안됨
+
+li li .rangking {
+    color:red;
+}
+
+li li #rangking {
+    color:blue;
+}
+
+위 : 동2 ,은1
+아래 : 동2 ,금1
+아래꺼적용
+
+자세히 잘따져보면 구체적일수록 우선순위가높다.
+
+!important : 이름에서알수있지?
+inline-style : 태그옆에 바로 스타일 써주니까 선택자가 구체적
+id : 유일하게 쓰이니까 구체적
+속성,class : 여러군데쓰이니까 아이디보다 덜구체적
+tag : 이거야말로 아주 광범위하게 쓰임 아주아주아주 덜구체적임 (막연함)
