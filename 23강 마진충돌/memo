@@ -1,0 +1,29 @@
+마진 collasping:
+
+상하마진만 겹침 , 좌우마진은 겹치지 않음
+
+1. 형제간의 마진 collasping
+작은애가 큰애속으로 쏙들간다.
+
+ <div style=height:20px; margin-bottom:30px; background-color:yellow;></div>
+ <div style=height:20px; margin-top:20px; background-coor:green;></div>
+
+2. 빈태그 (height 높이가 없어야한다. 마진만존재하게되면 서로의 마진을 침범함)
+ content가 들어가야할자리에 서로의 영역을 침범
+   <div style="margin-bottom:30px; background-color: yellow;"></div>
+   <div style="margin-top: 20px; background-color: green;"></div>
+
+3. 부모자식관계
+첫번쨰 자식이 margin-top이 있거나 마지막 자식이 margin bottom이 있는경우에 발생
+   <div style="height:20px; margin-bottom:20px; background-color: yellow;">
+      <div style="height:20px; margin-top: 20px; background-color: green;"></div>
+   </div>
+부모의 영역을 뚫고나가서 마진이 나타나게됨 
+
+이3가지를 극복하는 방법이
+block 포맷 컨텍스트를 만들어주는 방법이다.
+
+1. float:left; width:100%
+2.display:inline-block;
+  width:100% 주면됨
+  보통 2번의 경우 저위3가지경우에 적용되기 쉬움

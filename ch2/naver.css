@@ -91,7 +91,7 @@ header {
   display: none;
 }
 
-#header-search > fieldset {
+#header-search>fieldset {
   width: 521px;
   height: 49px;
   display: inline-block;
@@ -104,7 +104,7 @@ header {
   position: relative;
 }
 
-#header-search > fieldset div {
+#header-search>fieldset div {
   position: relative;
 }
 
@@ -136,7 +136,7 @@ header {
   vertical-align: middle;
 }
 
-#header-search > fieldset input {
+#header-search>fieldset input {
   /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
   border: none;
   /* tol right bottom left 전부적용됨 */
@@ -309,4 +309,12 @@ nav li:nth-child(16) span:first-child {
   margin-top: -9px;
   color: #00ab33;
   font-size: 16px;
+}
+
+/* 마진 collapsing 현상 해결 */
+main {
+  /* display하고 width 주석했다가 풀어보면 무엇이바뀌었는지암 */
+  /* background-color: #f2f4f7; */
+  display: inline-block;
+  width: 100%;
 }
