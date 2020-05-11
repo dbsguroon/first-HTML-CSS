@@ -14,170 +14,299 @@
 } */
 /* 모든요소에적용 */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* html 과 body에 기본적으로 제공되는 padding ,margin을제거 */
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Malgun Gothic", "맑은 고딕", -apple-system, BlinkMacSystemFont,
+    helvetica, "Apple SD Gothic Neo", sans-serif;
 }
-
 
 /* 화면에서 사라지는 클래스임 ,웹접근성을 높임*/
 .blind {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    margin: -1px;
-    width: 1px;
-    height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
 }
 
 /* 앞에 div는 생략가능  div 태그만 생략이 가능하다*/
 .center-align {
-    margin: 0 auto;
-    width: 1080px;
+  margin: 0 auto;
+  width: 1080px;
 }
 
 /* block format context 활용 
 #header-top {
     overflow: hidden;
+}*/
+
+/* 헤더의높이 */
+header {
+  height: 170px;
 }
-*/
+
+#header-top {
+  margin-top: 5px;
+}
 
 #header-top span {
-    float: right;
-    color: #888888;
-    letter-spacing: -1px;
-    font-size: 11px;
-    line-height: 22px;
-    padding: 10px;
+  float: right;
+  color: #888888;
+  letter-spacing: -1px;
+  font-size: 11px;
+  line-height: 22px;
 }
 
 /* clear 를 활용 */
 #header-search {
-    clear: both;
+  clear: both;
+  padding-top: 10px;
 }
 
 /* h1 태그는 가로의 100%로를 차지하니까 width를 주는것 
    width가 적용된것을 볼려면 background-color를 주면확인가능    */
 
 #header-search a {
-    text-decoration: none;
-    vertical-align: middle;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 #header-search h1 {
-    width: 198px;
-    height: 48px;
-    display: inline-block;
-    background: url(sp_search.png) -10px -5px no-repeat;
-    position: relative;
-    top: -3px;
+  width: 198px;
+  height: 48px;
+  display: inline-block;
+  background: url(sp_search.png) -10px -5px no-repeat;
+  position: relative;
+  top: -3px;
 }
 
 #header-search h1 span {
-    display: none;
+  display: none;
 }
 
-#header-search>fieldset {
-    width: 521px;
-    height: 49px;
-    display: inline-block;
-    /* inline-block으로 마진을 없앰 */
-    margin-left: 20px;
-    padding: 12px 0 12px 10px;
-    border: 2px solid #03cf5d;
-    box-sizing: border-box;
-    vertical-align: middle;
-    position: relative;
-
-
+#header-search > fieldset {
+  width: 521px;
+  height: 49px;
+  display: inline-block;
+  /* inline-block으로 마진을 없앰 */
+  margin-left: 20px;
+  padding: 12px 0 12px 10px;
+  border: 2px solid #03cf5d;
+  box-sizing: border-box;
+  vertical-align: middle;
+  position: relative;
 }
 
-#header-search>fieldset input {
-    /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
-    border: none;
-    /* tol right bottom left 전부적용됨 */
-    padding: 0;
-    /* 검색창을 클릭했을때 파란색으로 outline이나오는데 없애고싶을때 사용 , 궁금하면 이코드만지워보고 검색창 클릭*/
-    outline: none;
-    vertical-align: top;
-    width: 405px;
-    height: 23px;
+#header-search > fieldset div {
+  position: relative;
+}
+
+#search-keyboard {
+  display: inline-block;
+  position: absolute;
+  width: 19px;
+  height: 21px;
+  right: 80px;
+  top: -22px;
+  padding: 0 6px;
+  background-image: url(sp_search.png);
+  background-repeat: no-repeat;
+  background-position: -33px -55px;
+  vertical-align: middle;
+}
+
+#search-history {
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 21px;
+  right: 60px;
+  top: -22px;
+  padding: 0 6px;
+  background-image: url(sp_search.png);
+  background-repeat: no-repeat;
+  background-position: -85px -51px;
+  vertical-align: middle;
+}
+
+#header-search > fieldset input {
+  /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
+  border: none;
+  /* tol right bottom left 전부적용됨 */
+  padding: 0;
+  /* 검색창을 클릭했을때 파란색으로 outline이나오는데 없애고싶을때 사용 , 궁금하면 이코드만지워보고 검색창 클릭*/
+  outline: none;
+  vertical-align: top;
+  width: 405px;
+  height: 23px;
 }
 
 #header-search fieldset button {
-    width: 49px;
-    height: 49px;
-    border: none;
-    padding: 0;
-    background: #03cf5d;
-    position: absolute;
-    top: -1px;
-    right: 0;
-
+  width: 49px;
+  height: 49px;
+  border: none;
+  padding: 0;
+  background: #03cf5d;
+  position: absolute;
+  top: -1px;
+  right: 0;
 }
 
 #header-search fieldset button .search-image {
-    /* inline block 이어야 width와 hegiht 값을 넣을수있음 */
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    /* 정중앙에 오게할람 49px = 21px+14px +14px  */
-    margin: 14px;
-    background: url(sp_search.png);
-    background-position: -4px -60px;
-    background-repeat: no-repeat;
+  /* inline block 이어야 width와 hegiht 값을 넣을수있음 */
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  /* 정중앙에 오게할람 49px = 21px+14px +14px  */
+  margin: 14px;
+  background: url(sp_search.png);
+  background-position: -4px -60px;
+  background-repeat: no-repeat;
+}
+
+nav {
+  height: 46px;
+  border-top: 1px solid #d1de84;
+  border-bottom: 1px solid #d1de84;
+}
+
+nav ul {
+  padding: 16px 0 0 4px;
+  margin: 0;
+  display: inline-block;
 }
 
 nav .center-align {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  position: relative;
 }
 
 nav .center-align li {
-    display: inline-block;
+  display: inline-block;
 }
 
 nav li span:first-child {
-    display: inline-block;
-    height: 16px;
-    background-image: url(sp_nav.png);
-    background-repeat: no-repeat;
-    margin-left: 14px;
+  display: inline-block;
+  height: 16px;
+  background-image: url(sp_nav.png);
+  background-repeat: no-repeat;
+  margin-left: 14px;
 }
 
 nav li:first-child span:first-child {
-    width: 25px;
-    background-position: 0 -285px;
-    margin-left: 0;
+  width: 25px;
+  background-position: 0 -285px;
+  margin-left: 0;
 }
 
 nav li:nth-child(2) span:first-child {
-    width: 27px;
-    background-position: -279px -52px;
+  width: 27px;
+  background-position: -279px -52px;
 }
 
 nav li:nth-child(3) span:first-child {
-    width: 40px;
-    background-position: -100px -182px;
+  width: 40px;
+  background-position: -100px -182px;
 }
 
 nav li:nth-child(4) span:first-child {
-    width: 40px;
-    background-position: -101px -156px;
+  width: 40px;
+  background-position: -101px -156px;
 }
 
 nav li:nth-child(5) span:first-child {
-    width: 26px;
-    background-position: -279px -156px;
+  width: 26px;
+  background-position: -279px -156px;
 }
 
 nav li:nth-child(6) span:first-child {
-    width: 25px;
-    background-position: -70px -285px;
+  width: 25px;
+  background-position: -70px -285px;
+}
+
+nav li:nth-child(7) span:first-child {
+  width: 35px;
+  background-position: -124px -131px;
+}
+
+nav li:nth-child(8) span:first-child {
+  width: 30px;
+  background-position: -278px -207px;
+}
+
+nav li:nth-child(9) span:first-child {
+  width: 30px;
+  background-position: -128px -103px;
+}
+
+nav li:nth-child(10) span:first-child {
+  width: 30px;
+  background-position: -35px -259px;
+}
+
+nav li:nth-child(11) span:first-child {
+  width: 42px;
+  background-position: -150px -155px;
+}
+
+nav li:nth-child(12) span:first-child {
+  width: 30px;
+  background-position: -279px -129px;
+}
+
+nav li:nth-child(13) span:first-child {
+  width: 30px;
+  background-position: -233px -232px;
+}
+
+nav li:nth-child(14) span:first-child {
+  width: 30px;
+  background-position: -70px -258px;
+}
+
+nav li:nth-child(15) span:first-child {
+  width: 15px;
+  background-position: -138px -77px;
+}
+
+nav li:nth-child(16) span:first-child {
+  width: 30px;
+  background-position: -279px 0px;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
+  margin: 18px 16px 0;
+  display: inline-block;
+}
+
+#more-look {
+  width: 70px;
+  height: 16px;
+  background-image: url(sp_nav.png);
+  background-repeat: no-repeat;
+  background-position: 5px -104px;
+}
+
+#search-ranking {
+  position: absolute;
+  top: 13px;
+  right: 80px;
+}
+
+#rank-number {
+  margin-top: -9px;
+  color: #00ab33;
+  font-size: 16px;
 }
