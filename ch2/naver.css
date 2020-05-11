@@ -41,12 +41,24 @@ body {
     width: 1080px;
 }
 
-.center-align div {
+/* block format context 활용 
+#header-top {
     overflow: hidden;
 }
+*/
 
-.center-align div span {
+#header-top span {
     float: right;
+    color: #888888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* clear 를 활용 */
+#header-search {
+    clear: both;
 }
 
 /* h1 태그는 가로의 100%로를 차지하니까 width를 주는것 

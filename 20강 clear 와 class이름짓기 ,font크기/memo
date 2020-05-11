@@ -1,0 +1,62 @@
+clear : float로인한 영역침범을 막는다.
+
+float를 해제시키는것이라고 보면된다.
+
+float:right면
+그다음 태그에 clear:right를 주면된다.
+또는 clear:both를 주면된다.
+both는 float:left 와 float:right를 동시에 해제시키는것이다.
+
+  <div id="header-top">
+        <span>네이버를 시작페이지로</span>
+        <span>쥬니어 네이버</span>
+        <span>해피빈</span>
+      </div>
+      <div id="header-search">
+
+이런경우에  
+<style>
+    #header-top span {
+        float:right;
+    }
+    #header-search{
+        clear:right or clear:both;
+    }
+</style>
+
+즉 2가지방법이 있는것이다.
+
+1. header-top 에 overflow:hidden을 주는방법
+2. header-search 에 clear:right or both를 주는방법
+
+--------------------------------------------------------------
+
+class 명 짓는법
+
+id는 두단어 이상으로 조합하는게좋음
+왜냐하면 HTML상에서 한번밖에못쓰기 떄문
+
+class는 여러번동시에 써도 되기 떄문에
+한단어로 써도됨
+
+--------------------------------------------
+
+  color: #888;
+  letter-spacing: -1px;
+  font-size: 11px;
+  line-height: 22px;
+
+color:#888888 원래는 6자리이고 2자리씩끊어서 반복되는것을 제거해서 3자리로 쓸수있음
+letter-spacing : 글자간의 간격을 나타냄
+font-size : 글자크기를 나타냄
+line-height : 글자의 높이를 제어
+
+font-size만 있으면 font-size의 크기만큼 높이가 늘어나는반면에
+line-height 가 있으면 글자의 간격높이가 정해져있어
+그간격을 맞추기 위해서 font가 서로 겹쳐지는것을 볼수가 있음
+충분한 line-height 간격을 줄필요가 있음
+
+font가여러줄일때
+width를 주었을때 line-height의 간격이 너무 적으면
+글자가 겹치게 되기 떄문에
+넉넉한 line-height를 주어야 한다.
