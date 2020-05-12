@@ -91,7 +91,7 @@ header {
   display: none;
 }
 
-#header-search>fieldset {
+#header-search > fieldset {
   width: 521px;
   height: 49px;
   display: inline-block;
@@ -104,7 +104,7 @@ header {
   position: relative;
 }
 
-#header-search>fieldset div {
+#header-search > fieldset div {
   position: relative;
 }
 
@@ -136,7 +136,7 @@ header {
   vertical-align: middle;
 }
 
-#header-search>fieldset input {
+#header-search > fieldset input {
   /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
   border: none;
   /* tol right bottom left 전부적용됨 */
@@ -156,7 +156,7 @@ header {
   background: #03cf5d;
   position: absolute;
   top: -1px;
-  right: 0;
+  right: -1px;
 }
 
 #header-search fieldset button .search-image {
@@ -329,6 +329,8 @@ main {
   width: 740px;
   height: 120px;
   background: #555;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-login {
@@ -337,7 +339,7 @@ main {
   height: 120px;
   vertical-align: top;
   background-color: white;
-
+  margin-bottom: 8px;
 }
 
 #main-ytn {
@@ -345,6 +347,8 @@ main {
   width: 740px;
   height: 46px;
   background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-newsstand {
@@ -352,7 +356,8 @@ main {
   width: 740px;
   height: 246px;
   background-color: white;
-
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-weather {
@@ -360,6 +365,7 @@ main {
   width: 332px;
   height: 142px;
   background-color: white;
+  margin-bottom: 8px;
 }
 
 #main-second-ad {
@@ -367,7 +373,7 @@ main {
   width: 332px;
   height: 150px;
   background: #555;
-
+  margin-bottom: 8px;
 }
 
 #main-category {

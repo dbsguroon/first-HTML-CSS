@@ -1,0 +1,27 @@
+인라인 블록간의 간격
+
+분명히 margin까지 합해서 width 간격이
+1080인데 로그인창이 아래로 내려갈때 해결방법
+
+1. <div id="main-login"> 로그인창의 엔터를 없애기
+
+   <div id="main-ad"></div><div id="main-login">
+
+2. inline-block을 감싸고 있는 div에 
+   font-size:0; 을주고
+   자식들에게 다시 font-size를 주기
+
+    <div style="font-size:0;">
+        <div id="main-ad"></div>
+        <div id="main-login" style="font-size:12px";>
+          <h3>로그인</h3>
+        </div>
+    </div>
+
+3. float: left를 쓴다음
+   부모에 overflow:auto; 로 감싼다.
+
+4. float: left를 쓴다음
+   부모에 display:inline-block 
+          width 100%로를 쓴다.
+            
