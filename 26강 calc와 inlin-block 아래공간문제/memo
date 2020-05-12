@@ -1,0 +1,48 @@
+
+
+즉쉽게이야기하면 이챕터에서 두가지 문제에 직면해있다.
+첫번쨰문제 : margin을 주었는데 미묘하게 맞질않음
+
+두번쨰문제
+float : left를 주게되면
+부모가 자식을 감싸지못하게되고
+
+자식을감싸기위해 display를 inline-block 으로
+
+하게 되면 inline-block들끼리 서로 5px정도의 틈이 벌어지는현상
+
+inline-block 가로간에 벌어지는현상은 float:left를주고
+inline-block 세로간에 벌어지는현상은 vertical-align:top을준다
+
+뉴스스탠드에서
+
+높이가 0인데 
+list들이 다 float이 left이기 떄문이다.
+그러면 기본적으로 containing block 에서 벗어나기 때문에
+부모태그가 자식태그들을 감싸지못하는 현상이 발생함
+부모태그에 overflow를 주든가 display:inline-block을 주어서해결해야함
+참고로 inline-block 들끼리도 5px벌어지는 문제가 생겨나기떄문에
+이떄 또 float:left를 해주어야한다.
+
+123px로 하면 약간의 간격이 벌어지고
+123.333 으로 하면 간격이 미묘하게 줄어드는데
+해결방법을 찾아보면
+참고로 width가 740px인데
+list(아이템들을) 6개로 나누면 123.3333 이나온다.
+list들의 width를 1/6로 하고싶으면
+calc라는것을 쓴다.
+calc(100% / 6) 을해주면된다 
+100%= 740px을 말하고 알아서 6으로나누어서 6등분을해준다.
+calc쓸때 주의해야할점은 띄어쓰기를 해주어야 한다는 점이다.
+/,+,-,곱셉 등을할때 띄어쓰기를 해주어야한다.
+
+
+즉여기서 말하고자하는바는
+inline-block끼리만날떄 가로와 세로모두 벌어지는 현상이 발생하는데
+inline-block 가로간에 벌어지는현상은 float:left를주고
+inline-block 세로간에 벌어지는현상은 vertical-align:top을준다
+
+ifram
+:웹페이지안에 또다른 웹페이자가들어가는것
+frameborder=0 경계선테두리를 쓰지않겠다.
+scrolling=no 하면 scroll이 안생김
