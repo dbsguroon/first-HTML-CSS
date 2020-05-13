@@ -112,7 +112,11 @@ header {
   display: none;
 }
 
-#header-search>fieldset {
+#header-search form {
+  display: inline-block;
+}
+
+#header-search>form fieldset {
   width: 521px;
   height: 49px;
   display: inline-block;
@@ -125,7 +129,7 @@ header {
   position: relative;
 }
 
-#header-search>fieldset div {
+#header-search>form fieldset div {
   position: relative;
 }
 
@@ -157,7 +161,7 @@ header {
   vertical-align: middle;
 }
 
-#header-search>fieldset input {
+#header-search>form fieldset input {
   /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
   border: none;
   /* tol right bottom left 전부적용됨 */
@@ -169,7 +173,7 @@ header {
   height: 23px;
 }
 
-#header-search fieldset button {
+#header-search>form fieldset button {
   width: 49px;
   height: 49px;
   border: none;
@@ -180,7 +184,7 @@ header {
   right: -1px;
 }
 
-#header-search fieldset button .search-image {
+#header-search>form fieldset button .search-image {
   /* inline block 이어야 width와 hegiht 값을 넣을수있음 */
   display: inline-block;
   width: 21px;
@@ -463,6 +467,70 @@ main {
   vertical-align: top;
   background-color: white;
   margin-bottom: 8px;
+}
+
+#main-login .login-wrapper {
+  padding: 15px 25px;
+}
+
+#main-login .login-wrapper a {
+  display: inline-block;
+}
+
+#main-login .login-text {
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#main-login .login-wrapper .login-image {
+  display: inline-block;
+  background: url(sp_login.png) 0 -47px no-repeat;
+  width: 280px;
+  height: 37px;
+  margin-top: 12px;
+}
+
+#main-login .login {
+  display: inline-block;
+  padding-right: 10px;
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+
+}
+
+
+#main-login .pw {
+  display: inline-block;
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+}
+
+#main-login .sign-up {
+  position: relative;
+  right: -104px;
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+
+
+}
+
+#main-login .login:hover {
+  text-decoration: underline;
+}
+
+#main-login .pw:hover {
+  text-decoration: underline;
+}
+
+#main-login .sign-up:hover {
+  text-decoration: underline;
 }
 
 #main-second-block {
