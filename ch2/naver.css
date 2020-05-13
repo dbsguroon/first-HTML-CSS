@@ -26,6 +26,10 @@ body {
     helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -108,7 +112,7 @@ header {
   display: none;
 }
 
-#header-search > fieldset {
+#header-search>fieldset {
   width: 521px;
   height: 49px;
   display: inline-block;
@@ -121,7 +125,7 @@ header {
   position: relative;
 }
 
-#header-search > fieldset div {
+#header-search>fieldset div {
   position: relative;
 }
 
@@ -153,7 +157,7 @@ header {
   vertical-align: middle;
 }
 
-#header-search > fieldset input {
+#header-search>fieldset input {
   /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
   border: none;
   /* tol right bottom left 전부적용됨 */
@@ -207,11 +211,11 @@ nav .center-align {
   position: relative;
 }
 
-nav .center-align li {
+#nav-menu li {
   display: inline-block;
 }
 
-nav li span:first-child {
+#nav-menu li span:first-child {
   display: inline-block;
   height: 16px;
   background-image: url(sp_nav.png);
@@ -219,83 +223,83 @@ nav li span:first-child {
   margin-left: 14px;
 }
 
-nav li:first-child span:first-child {
+#nav-menu li:first-child span:first-child {
   width: 25px;
   background-position: 0 -285px;
   margin-left: 0;
 }
 
-nav li:nth-child(2) span:first-child {
+#nav-menu li:nth-child(2) span:first-child {
   width: 27px;
   background-position: -279px -52px;
 }
 
-nav li:nth-child(3) span:first-child {
+#nav-menu li:nth-child(3) span:first-child {
   width: 40px;
   background-position: -100px -182px;
 }
 
-nav li:nth-child(4) span:first-child {
+#nav-menu li:nth-child(4) span:first-child {
   width: 40px;
   background-position: -101px -156px;
 }
 
-nav li:nth-child(5) span:first-child {
+#nav-menu li:nth-child(5) span:first-child {
   width: 26px;
   background-position: -279px -156px;
 }
 
-nav li:nth-child(6) span:first-child {
+#nav-menu li:nth-child(6) span:first-child {
   width: 25px;
   background-position: -70px -285px;
 }
 
-nav li:nth-child(7) span:first-child {
+#nav-menu li:nth-child(7) span:first-child {
   width: 35px;
   background-position: -124px -131px;
 }
 
-nav li:nth-child(8) span:first-child {
+#nav-menu li:nth-child(8) span:first-child {
   width: 30px;
   background-position: -278px -207px;
 }
 
-nav li:nth-child(9) span:first-child {
+#nav-menu li:nth-child(9) span:first-child {
   width: 30px;
   background-position: -128px -103px;
 }
 
-nav li:nth-child(10) span:first-child {
+#nav-menu li:nth-child(10) span:first-child {
   width: 30px;
   background-position: -35px -259px;
 }
 
-nav li:nth-child(11) span:first-child {
+#nav-menu li:nth-child(11) span:first-child {
   width: 42px;
   background-position: -150px -155px;
 }
 
-nav li:nth-child(12) span:first-child {
+#nav-menu li:nth-child(12) span:first-child {
   width: 30px;
   background-position: -279px -129px;
 }
 
-nav li:nth-child(13) span:first-child {
+#nav-menu li:nth-child(13) span:first-child {
   width: 30px;
   background-position: -233px -232px;
 }
 
-nav li:nth-child(14) span:first-child {
+#nav-menu li:nth-child(14) span:first-child {
   width: 30px;
   background-position: -70px -258px;
 }
 
-nav li:nth-child(15) span:first-child {
+#nav-menu li:nth-child(15) span:first-child {
   width: 15px;
   background-position: -138px -77px;
 }
 
-nav li:nth-child(16) span:first-child {
+#nav-menu li:nth-child(16) span:first-child {
   width: 30px;
   background-position: -279px 0px;
 }
@@ -308,7 +312,8 @@ nav li:nth-child(16) span:first-child {
   display: inline-block;
 }
 
-#more-look {
+.nav-more #more-look {
+  display: inline-block;
   width: 70px;
   height: 16px;
   background-image: url(sp_nav.png);
@@ -319,10 +324,34 @@ nav li:nth-child(16) span:first-child {
 #search-ranking {
   position: absolute;
   top: 13px;
-  right: 80px;
+  right: -40px;
+  width: 198px;
+  height: 20px;
 }
 
-#rank-number {
+
+
+#search-ranking ul {
+  display: none;
+  list-style: none;
+  padding: 17px;
+  margin: 0;
+  width: 332px;
+  height: 331px;
+  border: 1px solid #aaa;
+  background: white;
+  position: absolute;
+  top: -13px;
+  right: 40px;
+}
+
+#search-ranking:hover ul {
+  display: inline-block;
+
+}
+
+#rank-number,
+.rank-number {
   margin-top: -9px;
   color: #00ab33;
   font-size: 16px;
@@ -364,6 +393,7 @@ main {
   background-color: white;
   margin-bottom: 8px;
 }
+
 #main-second-block {
   margin-bottom: 8px;
   display: inline-block;
@@ -413,6 +443,7 @@ main {
   list-style: none;
   display: inline-block;
 }
+
 #main-newsstand li {
   float: left;
   width: calc(100% / 6);
@@ -421,6 +452,7 @@ main {
   border-right: 1px solid #ebeef3;
   text-align: center;
 }
+
 #main-newsstand li img {
   position: relative;
   top: 50%;
@@ -443,6 +475,7 @@ main {
   background: #555;
   vertical-align: top;
 }
+
 #main-third-block,
 #main-fourth-block {
   display: inline-block;
