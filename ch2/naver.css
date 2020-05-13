@@ -329,8 +329,6 @@ nav .center-align {
   height: 20px;
 }
 
-
-
 #search-ranking ul {
   display: none;
   list-style: none;
@@ -347,7 +345,80 @@ nav .center-align {
 
 #search-ranking:hover ul {
   display: inline-block;
+}
 
+#search-ranking ul li:nth-of-type(1) {
+  padding-top: 10px;
+}
+
+#keyword {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#keyword>span:nth-child(1) {
+  font-weight: bold;
+}
+
+#keyword>span:nth-child(2) {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 42px;
+}
+
+#keyword>span:nth-child(3) {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#list-tab {
+  border: 1px solid #aaa;
+  overflow: hidden;
+}
+
+#list-tab>span:nth-child(1) {
+  float: left;
+  width: calc(100% / 2);
+  border-right: 1px solid #aaa;
+  text-align: center;
+}
+
+#list-tab>span:nth-child(2) {
+  float: left;
+  width: calc(100% / 2);
+  text-align: center;
+
+}
+
+#list-bottom {
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+#list-bottom>span:first-child {
+  font-size: 12px;
+  overflow: hidden;
+}
+
+#list-bottom>span:nth-child(1) {
+  float: left;
+  padding-right: 10px;
+}
+
+#list-bottom>span:nth-child(3) {
+  float: left;
+  width: 14px;
+  height: 14px;
+  background: url(sp_search.png);
+  background-position: -84px -52px;
+}
+
+#list-bottom>span:nth-child(4) {
+  font-size: 12px;
+  float: right
 }
 
 #rank-number,
