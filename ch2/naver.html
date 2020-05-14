@@ -7,6 +7,7 @@
   <!-- 같은 링크 rel이래도 역활이다름 하나는 아이콘 하나는 style문서-->
   <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
   <link rel="stylesheet" href="naver.css" />
+  <link rel="stylesheet" href="webfont.css">
 </head>
 
 <body>
@@ -18,8 +19,8 @@
     <div class="center-align">
       <div id="header-top">
         <span>해피빈</span>
-        <span>쥬니어 네이버&nbsp|&nbsp</span>
-        <span>네이버를 시작페이지로&nbsp|&nbsp</span>
+        <span>쥬니어 네이버&nbsp;|&nbsp;</span>
+        <span>네이버를 시작페이지로&nbsp;|&nbsp;</span>
       </div>
       <div id="header-search">
         <a href="https://www.naver.com">
@@ -216,12 +217,14 @@
           </a>
         </li>
       </ul>
-  </nav>
+    </nav>
   <main>
     <div id="main-centered" class="center-align">
       <div id="main-first-block">
-        <div id="main-ad"></div>
-        <div id="main-login">
+        <section id="main-ad">
+          <h3 class="blind">광고</h3>
+        </section>
+        <section id="main-login">
           <h3 class="blind">로그인</h3>
           <div class="login-wrapper">
             <span class="login-text">네이버를 더 안전하고 편리하게 이용하세요.</span>
@@ -242,17 +245,17 @@
               <span>회원가입</span>
             </a>
           </div>
-        </div>
+        </section>
       </div>
       <div id="main-second-block">
         <div class="float-left">
-          <div id="main-ytn">
+          <section id="main-ytn">
             <h3>연합뉴스</h3>
             <ol>
               <li>'클럽 집단감염 비상'…유흥시설 운영자제 행정명령</li>
             </ol>
-          </div>
-          <div id="main-newsstand">
+          </section>
+          <section id="main-newsstand">
             <h3>뉴스스탠드</h3>
             <ul>
               <li><img src="osen.png" alt="osen 신문" /></li>
@@ -274,15 +277,19 @@
               <li><img src="한국일보.png" alt="한국일보" /></li>
               <li><img src="매일경제.png" alt="매일경제" /></li>
             </ul>
-          </div>
+          </section>
         </div>
         <div class="float-left">
-          <div id="main-weather"></div>
-          <div id="main-second-ad"></div>
+          <section id="main-weather">
+            <h3 class="blind">날씨</h3>
+          </section>
+          <section id="main-second-ad">
+            <h3 class="blind">광고</h3>
+          </section>
         </div>
       </div>
       <div id="main-third-block">
-        <div id="main-category">
+        <section id="main-category">
           <h3 class="blind">주제별보가</h3>
           <div id="main-category-top">
             <button id="subject-all">
@@ -320,16 +327,19 @@
               <span></span>
             </button>
           </div>
-        </div>
-        <div id="main-shopping">
+        </section>
+        <section id="main-shopping">
+          <h3 class="blind">쇼핑</h3>
           <iframe src="https://castbox.shopping.naver.com/shopbox/main.nhn?" frameborder="0" scrolling="no"></iframe>
-        </div>
+        </section>
       </div>
       <div id="main-fourth-block">
-        <div id="Main-event">
-          <h3>이벤트</h3>
-        </div>
-        <div id="main-third-ad"></div>
+        <section id="Main-event">
+          <h3 class="blind">이벤트</h3>
+        </section>
+        <section id="main-third-ad">
+          <h3 class="blind">광고</h3>
+        </section>
       </div>
     </div>
   </main>

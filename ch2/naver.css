@@ -116,7 +116,7 @@ header {
   display: inline-block;
 }
 
-#header-search>form fieldset {
+#header-search > form fieldset {
   width: 521px;
   height: 49px;
   display: inline-block;
@@ -129,7 +129,7 @@ header {
   position: relative;
 }
 
-#header-search>form fieldset div {
+#header-search > form fieldset div {
   position: relative;
 }
 
@@ -161,7 +161,7 @@ header {
   vertical-align: middle;
 }
 
-#header-search>form fieldset input {
+#header-search > form fieldset input {
   /*브라우저가 우리가 CSS적용안해도 기본으로 넣어주는 값을 제거 */
   border: none;
   /* tol right bottom left 전부적용됨 */
@@ -173,7 +173,7 @@ header {
   height: 23px;
 }
 
-#header-search>form fieldset button {
+#header-search > form fieldset button {
   width: 49px;
   height: 49px;
   border: none;
@@ -184,7 +184,7 @@ header {
   right: -1px;
 }
 
-#header-search>form fieldset button .search-image {
+#header-search > form fieldset button .search-image {
   /* inline block 이어야 width와 hegiht 값을 넣을수있음 */
   display: inline-block;
   width: 21px;
@@ -360,18 +360,18 @@ nav .center-align {
   padding-bottom: 10px;
 }
 
-#keyword>span:nth-child(1) {
+#keyword > span:nth-child(1) {
   font-weight: bold;
 }
 
-#keyword>span:nth-child(2) {
+#keyword > span:nth-child(2) {
   display: inline-block;
   position: absolute;
   top: 0;
   right: 42px;
 }
 
-#keyword>span:nth-child(3) {
+#keyword > span:nth-child(3) {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -383,18 +383,17 @@ nav .center-align {
   overflow: hidden;
 }
 
-#list-tab>span:nth-child(1) {
+#list-tab > span:nth-child(1) {
   float: left;
   width: calc(100% / 2);
   border-right: 1px solid #aaa;
   text-align: center;
 }
 
-#list-tab>span:nth-child(2) {
+#list-tab > span:nth-child(2) {
   float: left;
   width: calc(100% / 2);
   text-align: center;
-
 }
 
 #list-bottom {
@@ -402,17 +401,17 @@ nav .center-align {
   padding-top: 10px;
 }
 
-#list-bottom>span:first-child {
+#list-bottom > span:first-child {
   font-size: 12px;
   overflow: hidden;
 }
 
-#list-bottom>span:nth-child(1) {
+#list-bottom > span:nth-child(1) {
   float: left;
   padding-right: 10px;
 }
 
-#list-bottom>span:nth-child(3) {
+#list-bottom > span:nth-child(3) {
   float: left;
   width: 14px;
   height: 14px;
@@ -420,9 +419,9 @@ nav .center-align {
   background-position: -84px -52px;
 }
 
-#list-bottom>span:nth-child(4) {
+#list-bottom > span:nth-child(4) {
   font-size: 12px;
-  float: right
+  float: right;
 }
 
 #rank-number,
@@ -500,9 +499,7 @@ main {
   line-height: 14px;
   text-decoration: none;
   margin-top: 12px;
-
 }
-
 
 #main-login .pw {
   float: left;
@@ -511,7 +508,6 @@ main {
   line-height: 14px;
   text-decoration: none;
   margin-top: 12px;
-
 }
 
 #main-login .sign-up {
@@ -550,6 +546,15 @@ main {
   width: 332px;
   vertical-align: top;
 }
+#main-ytn h3,
+#main-newsstand h3 {
+  font-size: 14px;
+  font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo,
+    sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  vertical-align: top;
+}
 
 #main-ytn {
   display: inline-block;
@@ -562,6 +567,10 @@ main {
 #main-ytn h3,
 #main-ytn ol {
   display: inline-block;
+}
+#main-ytn ol {
+  margin: 0;
+  margin-top: 10px;
 }
 
 #main-newsstand {
@@ -644,6 +653,7 @@ main {
 #main-shopping iframe {
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 #Main-event {
@@ -689,7 +699,8 @@ main {
   padding: 14px 7px 0;
   font-weight: 700;
   font-size: 14px;
-  font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo,
+    sans-serif;
 }
 
 #subject-list li.highlight {
@@ -738,6 +749,10 @@ main {
   padding: 0;
 }
 
+#subject-all {
+  border-right: 1px solid #ebeef3;
+}
+
 #subject-all span:last-child {
   position: absolute;
   top: 15px;
@@ -769,4 +784,7 @@ main {
   background-image: url(sp_themecast.png);
   background-repeat: no-repeat;
   background-position: -320px -52px;
+}
+section {
+  border: 1px solid #dee3eb;
 }
