@@ -471,6 +471,7 @@ main {
 
 #main-login .login-wrapper {
   padding: 15px 25px;
+  overflow: hidden;
 }
 
 #main-login .login-wrapper a {
@@ -492,31 +493,36 @@ main {
 }
 
 #main-login .login {
-  display: inline-block;
+  float: left;
   padding-right: 10px;
   color: #888;
   font-size: 12px;
   line-height: 14px;
   text-decoration: none;
+  margin-top: 12px;
 
 }
 
 
 #main-login .pw {
-  display: inline-block;
+  float: left;
   color: #888;
   font-size: 12px;
   line-height: 14px;
   text-decoration: none;
+  margin-top: 12px;
+
 }
 
 #main-login .sign-up {
-  position: relative;
-  right: -104px;
+  float: right;
   color: #888;
   font-size: 12px;
   line-height: 14px;
   text-decoration: none;
+  margin-top: 12px;
+
+
 
 
 }
