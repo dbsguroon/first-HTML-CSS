@@ -1,0 +1,9 @@
+border:none;
+border-left:1px solid #ebeef3;
+
+보더를 없애준다음 레프트만적용해주는것도 가능
+
+
+position을 주면
+inline태그에서 display:block으로 바뀌면서
+width와 height를 써줄수있음
